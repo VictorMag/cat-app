@@ -1,0 +1,6 @@
+@CatApi_HostAddress = http://localhost:5223
+
+GET {{CatApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
