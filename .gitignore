@@ -1,0 +1,29 @@
+# IDE / Editor
+.idea/
+.claude/
+.vscode/
+*.suo
+*.user
+
+# ASP.NET Core / .NET
+**/bin/
+**/obj/
+*.user
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Secrets (nunca al repo)
+**/appsettings.Local.json
+**/secrets.json
+
+# Angular / Node
+cat-frontend/node_modules/
+cat-frontend/.angular/
+cat-frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
