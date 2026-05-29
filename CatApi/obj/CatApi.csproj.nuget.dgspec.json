@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\CatApi\\CatApi.csproj": {}
+    "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\catapi\\CatApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\CatApi\\CatApi.csproj": {
+    "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\catapi\\CatApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\CatApi\\CatApi.csproj",
+        "projectUniqueName": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\catapi\\CatApi.csproj",
         "projectName": "CatApi",
-        "projectPath": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\CatApi\\CatApi.csproj",
+        "projectPath": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\catapi\\CatApi.csproj",
         "packagesPath": "C:\\Users\\vmago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\CatApi\\obj\\",
+        "outputPath": "C:\\Users\\vmago\\Documents\\Private Devps\\interview-pg-cat\\catapi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

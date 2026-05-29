@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CatApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a2b9afac69484ba09e0052ba0e6ce2386b653dc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+916407999af875104ce55a738fa3cec71b56baa9")]
 [assembly: System.Reflection.AssemblyProductAttribute("CatApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CatApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
