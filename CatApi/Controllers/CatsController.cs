@@ -25,7 +25,7 @@ public class CatsController(TheCatApiClient catApiClient) : ControllerBase
     public async Task<IActionResult> GetImages([FromQuery] string breedId, [FromQuery] int limit = 10)
     {
         if (string.IsNullOrWhiteSpace(breedId))
-            return BadRequest("breedId is required.");
+            return BadRequest("El breedId es requerido");
 
         try
         {
