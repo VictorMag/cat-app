@@ -5,9 +5,9 @@ namespace CatApi.Services;
 
 public class TheCatApiClient(HttpClient httpClient)
 {
-    public Task<List<BreedDto>?> GetBreedsAsync()
-        => httpClient.GetFromJsonAsync<List<BreedDto>>("breeds");
+    public Task<List<BreedDto>?> GetBreedsAsync(CancellationToken cancellationToken)
+        => httpClient.GetFromJsonAsync<List<BreedDto>>("breeds", cancellationToken);
 
-    public Task<List<CatImageDto>?> GetImagesByBreedAsync(string breedId, int limit)
-        => httpClient.GetFromJsonAsync<List<CatImageDto>>($"images/search?breed_ids={breedId}&limit={limit}");
+    public Task<List<CatImageDto>?> GetImagesByBreedAsync(string breedId, int limit, CancellationToken cancellationToken)
+        => httpClient.GetFromJsonAsync<List<CatImageDto>>($"images/search?breed_ids={breedId}&limit={limit}", cancellationToken);
 }
