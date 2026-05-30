@@ -1,0 +1,45 @@
+<main class="app">
+  <header class="header">
+    <h1 class="title">Cat<span class="accent">Encyclopedia</span></h1>
+    <p class="subtitle">Busca y encuentra todas las razas de gatos en el mundo</p>
+  </header>
+
+  <section class="search-panel">
+    <div class="form-group">
+      <label for="breed-select">Raza</label>
+      <select id="breed-select" (change)="onBreedChange($event)" [disabled]="breeds().length === 0">
+        <option value="">Selecciona una raza...</option>
+        @for (breed of breeds(); track breed.id) {
+          <option [value]="breed.id">{{ breed.name }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="limit-input">Cantidad</label>
+      <input id="limit-input" type="number" [value]="limit()" (input)="onLimitChange($event)" min="1" max="50" />
+    </div>
+
+    <button class="search-btn" (click)="search()" [disabled]="!selectedBreedId() || loading()">
+      @if (loading()) { Buscando... } @else { Buscar }
+    </button>
+  </section>
+
+  @if (error()) {
+    <div class="error-banner">{{ error() }}</div>
+  }
+
+  @if (images().length > 0) {
+    <section class="image-grid">
+      @for (image of images(); track image.id) {
+        <div class="image-card">
+          <img [src]="image.url" [alt]="selectedBreedId()" loading="lazy" />
+        </div>
+      }
+    </section>
+  }
+
+  @if (!loading() && images().length === 0 && selectedBreedId() && !error()) {
+    <p class="empty-state">No se encontraron imágenes para esta raza.</p>
+  }
+</main>
