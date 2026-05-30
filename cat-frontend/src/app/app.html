@@ -48,7 +48,7 @@
     <section class="image-grid">
       @for (image of images(); track image.id) {
         <div class="image-card">
-          <img [src]="image.url" [alt]="selectedBreedId()" loading="lazy" />
+          <img [src]="image.url" [alt]="selectedBreed()?.name" loading="lazy" />
         </div>
       }
     </section>

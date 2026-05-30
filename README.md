@@ -19,6 +19,16 @@ The Cat API (api.thecatapi.com/v1)
 - [.NET 9 SDK](https://dotnet.microsoft.com/download)
 - [Node.js 20+](https://nodejs.org)
 
+## Setup
+
+Before running the API, configure the API key using .NET User Secrets so it never touches the repo:
+
+```bash
+cd CatApi
+dotnet user-secrets init
+dotnet user-secrets set "TheCatApi:ApiKey" "your_api_key_here"
+```
+
 ## Quick Start
 
 **1. Start the API**
