@@ -137,6 +137,39 @@
   }
 }
 
+.breed-info {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.breed-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.breed-temperament {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.breed-description {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text);
+}
+
 .error-banner {
   padding: 1rem 1.5rem;
   background: rgba(224, 85, 85, 0.08);

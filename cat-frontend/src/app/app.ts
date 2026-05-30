@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, inject } from '@angular/core';
+import { Component, OnInit, signal, computed, inject } from '@angular/core';
 import { CatService } from './services/cat.service';
 import { Breed } from './models/breed.model';
 import { CatImage } from './models/cat-image.model';
@@ -19,6 +19,7 @@ export class App implements OnInit {
   loading = signal<boolean>(false);
   error = signal<string | null>(null);
   limitError = signal<string | null>(null);
+  selectedBreed = computed(() => this.breeds().find(b => b.id === this.selectedBreedId()) ?? null);
 
   ngOnInit() {
     this.catService.getBreeds().subscribe({

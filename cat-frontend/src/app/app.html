@@ -28,6 +28,18 @@
     </button>
   </section>
 
+  @if (selectedBreed()) {
+    <div class="breed-info">
+      <h2 class="breed-name">{{ selectedBreed()!.name }}</h2>
+      @if (selectedBreed()!.temperament) {
+        <p class="breed-temperament">{{ selectedBreed()!.temperament }}</p>
+      }
+      @if (selectedBreed()!.description) {
+        <p class="breed-description">{{ selectedBreed()!.description }}</p>
+      }
+    </div>
+  }
+
   @if (error()) {
     <div class="error-banner">{{ error() }}</div>
   }
