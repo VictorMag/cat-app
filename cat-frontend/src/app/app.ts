@@ -18,6 +18,7 @@ export class App implements OnInit {
   limit = signal<number>(10);
   loading = signal<boolean>(false);
   error = signal<string | null>(null);
+  limitError = signal<string | null>(null);
 
   ngOnInit() {
     this.catService.getBreeds().subscribe({
@@ -34,7 +35,22 @@ export class App implements OnInit {
 
   onLimitChange(event: Event) {
     const value = parseInt((event.target as HTMLInputElement).value, 10);
-    if (!isNaN(value) && value > 0) this.limit.set(value);
+    if (isNaN(value) || value < 1) {
+      this.limitError.set('El campo no puede estar vacío ni ser menor a 1.');
+    } else {
+      this.limitError.set(null);
+      this.limit.set(value);
+    }
+  }
+
+  onLimitBlur(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const value = parseInt(input.value, 10);
+    if (isNaN(value) || value < 1) {
+      input.value = '1';
+      this.limit.set(1);
+      this.limitError.set(null);
+    }
   }
 
   search() {
