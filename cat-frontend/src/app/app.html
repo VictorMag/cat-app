@@ -54,7 +54,7 @@
     </section>
   }
 
-  @if (!loading() && images().length === 0 && selectedBreedId() && !error()) {
+  @if (!loading() && searched() && images().length === 0 && !error()) {
     <p class="empty-state">No se encontraron imágenes para esta raza.</p>
   }
 </main>

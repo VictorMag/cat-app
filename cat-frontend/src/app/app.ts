@@ -19,6 +19,7 @@ export class App implements OnInit {
   loading = signal<boolean>(false);
   error = signal<string | null>(null);
   limitError = signal<string | null>(null);
+  searched = signal<boolean>(false);
   selectedBreed = computed(() => this.breeds().find(b => b.id === this.selectedBreedId()) ?? null);
 
   ngOnInit() {
@@ -32,6 +33,7 @@ export class App implements OnInit {
     this.selectedBreedId.set((event.target as HTMLSelectElement).value);
     this.images.set([]);
     this.error.set(null);
+    this.searched.set(false);
   }
 
   onLimitChange(event: Event) {
@@ -59,6 +61,7 @@ export class App implements OnInit {
     this.loading.set(true);
     this.error.set(null);
     this.images.set([]);
+    this.searched.set(true);
 
     this.catService.getImages(this.selectedBreedId(), this.limit()).subscribe({
       next: (data) => {
