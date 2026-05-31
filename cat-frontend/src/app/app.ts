@@ -46,16 +46,6 @@ export class App implements OnInit {
     }
   }
 
-  onLimitBlur(event: Event) {
-    const input = event.target as HTMLInputElement;
-    const value = parseInt(input.value, 10);
-    if (isNaN(value) || value < 1) {
-      input.value = '1';
-      this.limit.set(1);
-      this.limitError.set(null);
-    }
-  }
-
   search() {
     if (!this.selectedBreedId()) return;
     this.loading.set(true);

@@ -17,13 +17,13 @@
 
     <div class="form-group">
       <label for="limit-input">Cantidad</label>
-      <input id="limit-input" type="number" [value]="limit()" (input)="onLimitChange($event)" (blur)="onLimitBlur($event)" [class.input-invalid]="limitError()" min="1" max="100" />
+      <input id="limit-input" type="number" [value]="limit()" (input)="onLimitChange($event)" [class.input-invalid]="limitError()" min="1" max="100" />
       @if (limitError()) {
         <span class="field-error">{{ limitError() }}</span>
       }
     </div>
 
-    <button class="search-btn" (click)="search()" [disabled]="!selectedBreedId() || loading()">
+    <button class="search-btn" (click)="search()" [disabled]="!selectedBreedId() || loading() || !!limitError()">
       @if (loading()) { Buscando... } @else { Buscar }
     </button>
   </section>
