@@ -3,8 +3,9 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Breed } from '../models/breed.model';
 import { CatImage } from '../models/cat-image.model';
+import { environment } from '../../environments/environment';
 
-const API_BASE = 'http://localhost:5223/api/cats';
+const API_BASE = environment.apiBase;
 
 @Injectable({ providedIn: 'root' })
 export class CatService {
